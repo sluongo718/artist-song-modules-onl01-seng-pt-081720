@@ -4,7 +4,8 @@ require_relative '../lib/concerns/paramable'
 require 'pry'
 
 class Song
-  extend Memorable
+  extend Memorable::ClassMethods
+include Memorable::InstanceMethods
   extend Findable
   include Paramable
   
